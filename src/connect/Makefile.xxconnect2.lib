@@ -1,0 +1,19 @@
+# $Id: Makefile.xxconnect2.lib 642601 2021-12-23 12:19:07Z fukanchi $
+
+SRC = ncbi_uv_nghttp2 ncbi_http2_session
+
+LIB = xxconnect2
+
+REQUIRES = LIBUV NGHTTP2
+
+LIB_OR_DLL = both
+DLL_LIB = xconnect
+
+CPPFLAGS = $(LIBUV_INCLUDE) $(NGHTTP2_INCLUDE) $(TLS_INCLUDE) \
+           -I$(srcdir)/mbedtls $(ORIG_CPPFLAGS)
+
+LIBS = $(XXCONNECT2_LIBS) $(ORIG_LIBS)
+
+WATCHERS = sadyrovr
+
+USES_LIBRARIES = xconnect

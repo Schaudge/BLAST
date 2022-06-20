@@ -1,0 +1,13 @@
+# $Id: Makefile.macro.lib 638239 2021-09-27 13:27:59Z gotvyans $
+
+LIB = macro
+SRC = macro__ macro___
+
+DLL_LIB = $(SEQ_LIBS)
+
+WATCHERS = stakhovv kans
+
+ASN_DEP = genome_collection seqset
+
+USES_LIBRARIES =  \
+    $(SEQ_LIBS) pub
